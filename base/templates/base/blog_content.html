@@ -17,10 +17,19 @@
         <div class="title">
         <h>{{object.title}}</h>
         </div>
+        <div class="row">
+            <div class="col-9 d-flex justify-content-center">
+                <img id="game_img" src="{% static 'base\static\img\GTA\GTA_V.webp'%}" alt="gta_v">
+            </div>
+            <div class="col-6 img-description pull-start">
+                <h>{{object.pub_date}}</h>
+            </div>
+        </div>
+        </div>
         <div class="text-body">
             <h style="text-align:justify">{{object.text|linebreaksbr}}</h>
         </div>
-        <h4>{{object.pub_date}}</h4> 
+        
     </div>
     
 <!-- MDB -->

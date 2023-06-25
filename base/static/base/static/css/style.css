@@ -7,12 +7,29 @@
 }
 
 .text-body {
+    max-width: 670px;
     font-family: Proxima Nova cond;
+    margin: auto;
+    text-align: justify;
 }
 
 .img-description {
+
+    /* display: flex; */
+    width: 720px;
     font-family: Roboto Condensed, sans-serif;
     src: url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Work+Sans:wght@100&display=swap);
     font-size: 16px;
-    color: #222
+    color: #222;
+    /* justify-content: center; */
+}
+
+#game_img {
+    display: flex;
+    height: 400px;
+    width: auto;
+}
+
+.row {
+    justify-content: space-around;
 }
