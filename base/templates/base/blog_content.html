@@ -1,7 +1,35 @@
-<div class="container">
-    <h1>{{object.title}}</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{object.title}}</title>
+    <link href="{% static 'base/static/css/style.css'%}" type='text/css' rel="stylesheet" />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+        <h>{{object.title}}</h>
+        </div>
+        <div class="text-body">
+            <h style="text-align:justify">{{object.text|linebreaksbr}}</h>
+        </div>
+        <h4>{{object.pub_date}}</h4> 
+    </div>
+    
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+></script>
+</body>
+</html>
 
-    <h2>{{object.text}}</h2>
 
-    <h3>{{object.pub_date}}</h3>
-</div>
+

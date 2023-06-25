@@ -1,0 +1,18 @@
+.title {
+    color: black;
+    font-size: 2.5rem !important;
+    font-family: WorkSans;
+    src: url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap);
+
+}
+
+.text-body {
+    font-family: Proxima Nova cond;
+}
+
+.img-description {
+    font-family: Roboto Condensed, sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Work+Sans:wght@100&display=swap);
+    font-size: 16px;
+    color: #222
+}
