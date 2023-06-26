@@ -17,17 +17,18 @@
     />
     {% include 'navbar.html'%}
     {% endblock %}{% block navbar_buttons%}{% include 'navbar_buttons.html'%}{% endblock %}
+    {% block game_block_image%}
+    {% include 'game_blog_image.html'%}
+    {% endblock %}
+    <div class="col-6 img-description pull-start">
+        <h>TODO: Credits and Author name... {{object.pub_date}}</h>
+    </div>
     <div class="container">
-        <div class="title">
+        {% comment %} <div class="title">
         <h>{{object.title}}</h>
-        </div>
+        </div> {% endcomment %}
         <div class="row">
-            {% block background_img%}
-            {% include 'background_image.html'%}
-            {% endblock %}
-            <div class="col-6 img-description pull-start">
-                <h>{{object.pub_date}}</h>
-            </div>
+            
         </div>
         </div>
         <div class="text-body">

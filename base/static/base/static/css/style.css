@@ -6,6 +6,10 @@
 
 }
 
+.navbuttons {
+    padding-top: -5px;
+}
+
 .text-body {
     max-width: 670px;
     font-family: Proxima Nova cond;
@@ -14,21 +18,41 @@
 }
 
 .img-description {
-
-    /* display: flex; */
     width: 720px;
     font-family: Roboto Condensed, sans-serif;
     src: url(https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&family=Work+Sans:wght@100&display=swap);
     font-size: 16px;
     color: #222;
-    /* justify-content: center; */
 }
 
-#game_img {
-    display: flex;
-    height: 400px;
-    width: auto;
+.img-container {
+    position: relative;
+    width: 100%;
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-block {
+    display: block;
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    width: 40%;
+    background-color: #976393dc !important;
+    color: #feda84 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-block h1 {
+    font-weight: bold;
+    font-size: 2vw !important;
+}
+
 
 .row {
     justify-content: space-around;
@@ -42,6 +66,7 @@
 
 .navbar {
     background-color: #976393 !important;
+    margin-bottom: -8px !important;
 }
 
 .nav-link {
@@ -53,8 +78,6 @@
     color: black !important;
     border-radius: 0% !important;
     box-shadow: none !important;
-    position: relative;
-    top: -11px;
 }
 
 .btn-home {
@@ -62,8 +85,6 @@
     padding-top: 0% !important;
     padding-bottom: 0% !important;
     background-color: #feda84 !important;
-    position: relative;
-    top: -11px;
 }
 
 .btn-hardware {
@@ -78,8 +99,6 @@
     padding-top: 0% !important;
     padding-bottom: 0% !important;
     background-color: #ff9b83 !important;
-    position: relative;
-    top: -11px;
 }
 
 .btn-reviews {
@@ -87,7 +106,6 @@
     padding-top: 0% !important;
     padding-bottom: 0% !important;
     background-color: #976393 !important;
-
 }
 
 .btn-opinion {
@@ -95,5 +113,4 @@
     padding-top: 0% !important;
     padding-bottom: 0% !important;
     background-color: #43457e !important;
-
 }
