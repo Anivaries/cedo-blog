@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{object.title}}</title>
-    <link href="{% static 'base/static/css/style.css'%}" type='text/css' rel="stylesheet" />
-    <!-- MDB -->
+    {% block links %}
+    {% include 'links.html'%}
+    {% endblock %}
+</head>
+<body>
+    {% block navbar %}
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
     rel="stylesheet"
     />
-</head>
-<body>
+    {% include 'navbar.html'%}
+    {% endblock %}{% block navbar_buttons%}{% include 'navbar_buttons.html'%}{% endblock %}
     <div class="container">
         <div class="title">
         <h>{{object.title}}</h>
         </div>
         <div class="row">
-            <div class="col-9 d-flex justify-content-center">
-                <img id="game_img" src="{% static 'base\static\img\GTA\GTA_V.webp'%}" alt="gta_v">
-            </div>
+            {% block background_img%}
+            {% include 'background_image.html'%}
+            {% endblock %}
             <div class="col-6 img-description pull-start">
                 <h>{{object.pub_date}}</h>
             </div>
@@ -32,11 +36,11 @@
         
     </div>
     
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
-></script>
+
+{% block scripts %}
+{% include 'scripts.html'%}
+{% endblock %}
+
 </body>
 </html>
 

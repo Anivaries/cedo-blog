@@ -33,3 +33,67 @@
 .row {
     justify-content: space-around;
 }
+
+.vl {
+    display: flex;
+    border-left: 1px solid rgb(254, 218, 132);
+    height: 40px;
+}
+
+.navbar {
+    background-color: #976393 !important;
+}
+
+.nav-link {
+    color: #feda84 !important;
+}
+
+.btn {
+    font-weight: bold !important;
+    color: black !important;
+    border-radius: 0% !important;
+    box-shadow: none !important;
+    position: relative;
+    top: -11px;
+}
+
+.btn-home {
+    width: 20%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    background-color: #feda84 !important;
+    position: relative;
+    top: -11px;
+}
+
+.btn-hardware {
+    width: 20%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    background-color: #685489 !important;
+}
+
+.btn-news {
+    width: 20%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    background-color: #ff9b83 !important;
+    position: relative;
+    top: -11px;
+}
+
+.btn-reviews {
+    width: 20%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    background-color: #976393 !important;
+
+}
+
+.btn-opinion {
+    width: 20%;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    background-color: #43457e !important;
+
+}

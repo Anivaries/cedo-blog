@@ -5,7 +5,6 @@ import os
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-print(BASE_DIR)
 
 SECRET_KEY = 'django-insecure-n2431e+@_##=iw^^-_w-9lcdl&=7sns#$qxiv0a8^^gno_*ujo'
 
@@ -92,5 +91,4 @@ USE_TZ = True
 
 STATIC_URL = 'base/static/'
 
-print(str(BASE_DIR) + STATIC_URL)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
