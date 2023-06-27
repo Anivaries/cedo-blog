@@ -8,6 +8,7 @@
 
 .navbuttons {
     padding-top: -5px;
+    height: 10px;
 }
 
 .text-body {
@@ -25,6 +26,12 @@
     color: #222;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .img-container {
     position: relative;
     width: 100%;
@@ -34,6 +41,41 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+.card {
+    height: 265px;
+    width: 610px;
+}
+
+.card-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    top: 130px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-img-pos {
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.card-text-title {
+    z-index: 100;
+    position: absolute;
+    bottom: 50px;
+    color: #feda84 !important;
+}
+
+.card-text-date {
+    z-index: 100;
+    position: absolute;
+    bottom: 5px;
+    color: #feda84 !important;
 }
 
 .text-block {
@@ -67,6 +109,12 @@ img {
 .navbar {
     background-color: #976393 !important;
     margin-bottom: -8px !important;
+    height: 40px;
+    /* width: 700px; */
+}
+
+.navbar .container {
+    width: 700px;
 }
 
 .nav-link {
@@ -76,8 +124,15 @@ img {
 .btn {
     font-weight: bold !important;
     color: black !important;
-    border-radius: 0% !important;
-    box-shadow: none !important;
+    border-radius: 1% !important;
+    box-shadow: 0px 0 6px -5px black;
+    /* box-shadow: none !important; */
+}
+
+.btns-line {
+    width: 100%;
+    height: 26px;
+    background-color: #feda84;
 }
 
 .btn-home {
@@ -91,26 +146,34 @@ img {
     width: 20%;
     padding-top: 0% !important;
     padding-bottom: 0% !important;
-    background-color: #685489 !important;
+    /* background-color: #685489 !important; */
+    background-color: #feda84 !important;
 }
 
 .btn-news {
     width: 20%;
     padding-top: 0% !important;
     padding-bottom: 0% !important;
-    background-color: #ff9b83 !important;
+    /* background-color: #ff9b83 !important; */
+    background-color: #feda84 !important;
 }
 
 .btn-reviews {
     width: 20%;
     padding-top: 0% !important;
     padding-bottom: 0% !important;
-    background-color: #976393 !important;
+    /* background-color: #976393 !important; */
+    background-color: #feda84 !important;
 }
 
 .btn-opinion {
     width: 20%;
     padding-top: 0% !important;
     padding-bottom: 0% !important;
-    background-color: #43457e !important;
+    /* background-color: #43457e !important; */
+    background-color: #feda84 !important;
+}
+
+#sfa {
+    width: 700px;
 }

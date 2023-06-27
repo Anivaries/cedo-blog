@@ -88,8 +88,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-print (BASE_DIR)
-
 STATIC_URL = 'base/static/'
-print(STATIC_URL)
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

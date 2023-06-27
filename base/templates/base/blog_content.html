@@ -1,20 +1,8 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{object.title}}</title>
-    {% block links %}
-    {% include 'links.html'%}
-    {% endblock %}
-</head>
-<body>
+{% block title%}{{object.title}}{% endblock%}
+    {% block reviews %}
     {% block navbar %}
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
-    rel="stylesheet"
-    />
     {% include 'navbar.html'%}
     {% endblock %}{% block navbar_buttons%}{% include 'navbar_buttons.html'%}{% endblock %}
     {% block game_block_image%}
@@ -24,11 +12,8 @@
         <h>TODO: Credits and Author name... {{object.pub_date}}</h>
     </div>
     <div class="container">
-        {% comment %} <div class="title">
-        <h>{{object.title}}</h>
-        </div> {% endcomment %}
+        {{object.category}}
         <div class="row">
-            
         </div>
         </div>
         <div class="text-body">
@@ -36,14 +21,7 @@
         </div>
         
     </div>
-    
-
-{% block scripts %}
-{% include 'scripts.html'%}
-{% endblock %}
-
-</body>
-</html>
+    {% endblock %}
 
 
 

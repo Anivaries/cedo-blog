@@ -1,7 +1,9 @@
 from django.urls import path
 
-from .views import BlogView
+from .views import ReviewView, ReviewListView
 
 urlpatterns = [
-    path("<slug:slug>/", BlogView.as_view(), name="blog-detail")
+    path("reviews/", ReviewListView.as_view(), name="reviews"),
+    path("review/<slug:slug>/", ReviewView.as_view(), name="blog-detail"),
+
 ]
