@@ -3,6 +3,15 @@ from typing import Any, Dict
 from django.views.generic import DetailView, ListView
 from .models import Article
 
+class ArticlesListView(ListView):
+    model = Article
+    template_name = "articles.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["articles"] = Article.objects.all().order_by('-pub_date')
+        return context
+    
 class ReviewView(DetailView):
     model = Article
     template_name = "blog_content.html"
