@@ -11,27 +11,22 @@
             <h2>MOST POPULAR</h2>
         </div>
     </div>
-    <div class="container ">
+    <div class="container">
             <center>
                 {% for article in articles %}
                 <div class="card bg-dark text-white" style="margin-bottom:15px">
                     <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
+                    <a href="{{article.get_absolute_url}}"> 
                     <div class="card-img-overlay">
                         <div class="card-pos">
                             <h5 class="card-text-title">{{article.title}}</h5>
-                            {% comment %} <p class="card-text">
-                              This is a wider card with supporting text below as a natural lead-in to additional
-                              content. This content is a little bit longer.
-                            </p> {% endcomment %}
                             <p class="card-text-date">{{article.pub_date}}</p>
                         </div>
-                     
                     </div>
+                </a>
                 </div>
                 {% endfor %}
             </center>
-            
-        {% comment %} </div> {% endcomment %}
     </div>
 </div>
 {% endblock %}

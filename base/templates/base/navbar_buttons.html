@@ -1,11 +1,11 @@
 {% block navbar_buttons%}
 <div class="btns-line">
     <div class="container navbuttons" id="sfa">
-        <a href="!#"><button type="button" class="btn-home btn ">
-            Home </button></a><a href="!#"><button type="button" class="btn-news btn">
-            News </button></a><a href="!#"><button type="button" class="btn-reviews btn py-0">
-            Reviews</button></a><a href="!#"><button type="button" class="btn-hardware btn py-0">
-            Hardware</button></a><a href="!#"><button type="button" class="btn-opinion btn py-0">
+        <a href="{% url 'articles'%}"><button type="button" class="btn-home btn ">
+            Home </button></a><a href="{% url 'news'%}"><button type="button" class="btn-news btn">
+            News </button></a><a href="{% url 'reviews'%}"><button type="button" class="btn-reviews btn py-0">
+            Reviews</button></a><a href="{% url 'hardware'%}"><button type="button" class="btn-hardware btn py-0">
+            Hardware</button></a><a href="{% url 'opinion'%}"><button type="button" class="btn-opinion btn py-0">
             Opinions</button></a>
     </div>
 </div>

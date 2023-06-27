@@ -30,3 +30,30 @@ class ReviewListView(ListView):
         context = super().get_context_data(**kwargs)
         context['reviews'] = Article.objects.filter(category="Review")
         return context
+    
+class OpinionListView(ListView):
+    model = Article
+    template_name = "opinion.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['opinion'] = Article.objects.filter(category="Opinion")
+        return context
+    
+class HardwareListView(ListView):
+    model = Article
+    template_name = "hardware.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['hardware'] = Article.objects.filter(category="Hardware")
+        return context
+    
+class NewsListView(ListView):
+    model = Article
+    template_name = "news.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['news'] = Article.objects.filter(category="News")
+        return context

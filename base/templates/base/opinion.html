@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title%}Opinions{% endblock%}
+{% block opinion %}
+{% load static %}
+{% block navber%}{% include 'navbar.html'%}{% endblock %}
+{% block navbar_buttons%}{% include 'navbar_buttons.html'%}{% endblock %}
+<div class="card-img-pos">
+    <div class="container center">
+            <center>
+                {% for article in opinion %}
+                <div class="card bg-dark text-white">
+                    <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
+                    <div class="card-img-overlay">
+                        <div class="card-pos">
+                            <h5 class="card-text-title">{{article.title}}</h5>
+                            {% comment %} <p class="card-text">
+                              This is a wider card with supporting text below as a natural lead-in to additional
+                              content. This content is a little bit longer.
+                            </p> {% endcomment %}
+                            <p class="card-text-date">{{article.pub_date}}</p>
+                        </div>
+                     
+                    </div>
+                </div>
+                {% endfor %}
+            </center>
+    </div>
+</div>
+
+
+{% endblock %}
+{% comment %} # TO DO: NAPRAVI 2 QUERY GDE PRVI I SVAKI TRECI UBACUJ U DUGACKU A DRUGA DVA IDU U JEDAN RED IZMEDJU {% endcomment %}
+<div class="card-img-pos">
+    <div class="container center">
+            <center>
+                {% for article in opinion %}
+                <div class="card bg-dark text-white">
+                    <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
+                    <div class="card-img-overlay">
+                        <div class="card-pos">
+                            <h5 class="card-text-title">{{article.title}}</h5>
+                            {% comment %} <p class="card-text">
+                              This is a wider card with supporting text below as a natural lead-in to additional
+                              content. This content is a little bit longer.
+                            </p> {% endcomment %}
+                            <p class="card-text-date">{{article.pub_date}}</p>
+                        </div>
+                     
+                    </div>
+                </div>
+                {% endfor %}
+            </center>
+    </div>
+</div>

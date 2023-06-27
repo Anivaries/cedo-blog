@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block title%}Reviews{% endblock%}
-{% block reviewlist %}
+{% block title%}News{% endblock%}
+{% block news %}
 {% load static %}
 {% block navber%}{% include 'navbar.html'%}{% endblock %}
 {% block navbar_buttons%}{% include 'navbar_buttons.html'%}{% endblock %}
 <div class="card-img-pos">
     <div class="container center">
             <center>
-                {% for article in reviews %}
+                {% for article in news %}
                 <div class="card bg-dark text-white">
                     <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
                     <div class="card-img-overlay">
