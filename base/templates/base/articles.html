@@ -8,10 +8,46 @@
 <div class="card-img-pos">
     <div class="container">
         <div class="row">
-            {% for article in articles %}
-            {% if forloop.last or forloop.counter0|divisibleby:"3" %}
+            <!--    HARDCODE OVO -->
             <div class="row">
                 <div class="col-md-6 mt-5 mb-5">
+                    <div class="card bg-dark text-white" style="margin-bottom:15px">
+                        <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
+                        <a href="{{article.get_absolute_url}}"> 
+                        <div class="card-img-overlay">
+                            <div class="card-pos">
+                                <h5 class="card-text-title">{% lorem 19 w %}</h5>
+                                <p class="card-text-date">date</p>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex pb-5">
+                <div class="card w-50" style="justify-content: flex-end;">
+                    <div class="card-block ">
+                        <h1 class="card-text good-review-score float-left">8.0</h1>
+                        <h4 class="card-title">{% lorem 15 w %}</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex pb-5">
+                <div class="card w-50 ">
+                    <div class="card-block ">
+                        <h1 class="card-text good-review-score float-left">8.0</h1>
+                        <h4 class="card-title">{% lorem 15 w %}</h4>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="solid">
+            <!--  ### HARDCODE OVO ### -->
+            
+            {% for article in articles %}
+            <div class="row">
+                <div class="col-md-6 mt-2 mb-2">
                     <div class="card bg-dark text-white" style="margin-bottom:15px">
                         <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
                         <a href="{{article.get_absolute_url}}"> 
@@ -23,45 +59,10 @@
                         </div>
                     </a>
                     </div>
-                    {% comment %} <div class="card w-auto">
-                        <div class="card-block">
-                            <h1 class="card-text good-review-score float-left">8.0</h1>
-                            <h4 class="card-title">{{article.title}}</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <div class="card-footer">
-                                <small class="text-muted">{{article.pub_date}}</small>
-                              </div>
-                        </div>
-                    </div> {% endcomment %}
                 </div>
             </div>
-            {% else %}
-            <div class="col-md-6 d-flex">
-                <div class="card w-50 ">
-                    <div class="card-block ">
-                        <h1 class="card-text good-review-score float-left">8.0</h1>
-                        <h4 class="card-title">{{article.title}}</h4>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
             {% endfor %}
         </div>
     </div>
 </div>
 {% endblock %}
-
-
-
-{% comment %} <div class="card bg-dark text-white" style="margin-bottom:15px">
-    <img src="{% static 'base\static\img\GTA\GTA_V.webp'%}" class="card-img" alt="GTA V"/>
-    <a href="{{article.get_absolute_url}}"> 
-    <div class="card-img-overlay">
-        <div class="card-pos">
-            <h5 class="card-text-title">{{article.title}}</h5>
-            <p class="card-text-date">{{article.pub_date}}</p>
-        </div>
-    </div>
-</a>
-</div> {% endcomment %}
