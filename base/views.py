@@ -28,7 +28,7 @@ class ReviewListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['reviews'] = Article.objects.filter(category="Review")
+        context['reviews'] = Article.objects.filter(category="Review").order_by('-pub_date')
         return context
     
 class OpinionListView(ListView):
@@ -37,7 +37,7 @@ class OpinionListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['opinion'] = Article.objects.filter(category="Opinion")
+        context['opinion'] = Article.objects.filter(category="Opinion").order_by('-pub_date')
         return context
     
 class HardwareListView(ListView):
@@ -46,7 +46,7 @@ class HardwareListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['hardware'] = Article.objects.filter(category="Hardware")
+        context['hardware'] = Article.objects.filter(category="Hardware").order_by('-pub_date')
         return context
     
 class NewsListView(ListView):
@@ -55,5 +55,5 @@ class NewsListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['news'] = Article.objects.filter(category="News")
+        context['news'] = Article.objects.filter(category="News").order_by('-pub_date')
         return context
