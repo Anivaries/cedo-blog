@@ -1,7 +1,9 @@
 # from django.views import generic
 from typing import Any, Dict
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, View
+from .forms import ContactForm
 from .models import Article
+from django.shortcuts import render, redirect
 
 class ArticlesListView(ListView):
     model = Article
@@ -57,3 +59,14 @@ class NewsListView(ListView):
         context = super().get_context_data(**kwargs)
         context['news'] = Article.objects.filter(category="News").order_by('-pub_date')
         return context
+
+def contact(request):
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+            print("message sent - add redirect")
+            return redirect('contact')
+    return render(request, 'contact.html', {'form':form})
+
