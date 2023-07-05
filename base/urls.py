@@ -10,5 +10,4 @@ urlpatterns = [
     path("hardware/", HardwareListView.as_view(), name="hardware"),
     path("news/", NewsListView.as_view(), name="news"),
     path("<slug:slug>/", ReviewView.as_view(), name="blog-detail"),
-    
 ]

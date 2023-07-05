@@ -1,14 +1,22 @@
 
 from pathlib import Path
 import os
+import environ
 
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+if READ_DOT_ENV_FILE:
+    environ.Env.read_env(os.path.join(BASE_DIR, 'blog/.env'))
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+SECRET_KEY = env('SECRET_KEY')
 
 
-SECRET_KEY = 'django-insecure-n2431e+@_##=iw^^-_w-9lcdl&=7sns#$qxiv0a8^^gno_*ujo'
-
-DEBUG = True
+DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = []
 
@@ -59,6 +67,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cedoblog',
+        'USER': 'postgres',
+        'PASSWORD': 'K0marchina!',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
