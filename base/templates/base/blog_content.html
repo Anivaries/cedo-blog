@@ -19,7 +19,9 @@
         <div class="text-body">
             <h style="text-align:justify">{{object.text|linebreaksbr}}</h>
         </div>
-        
+        {% for a in object.tags %}
+        #{{a}}
+        {% endfor %}
     </div>
     {% endblock %}
 

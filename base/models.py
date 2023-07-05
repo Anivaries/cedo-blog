@@ -18,8 +18,8 @@ class Article(models.Model):
     pub_date = models.DateTimeField("date published", auto_created = True)
     slug = models.SlugField(default="slug-one", max_length=70)
     category = models.CharField(max_length=10, choices=CATEGORY, default='Review')
+    tags = ArrayField(models.CharField(max_length=10), blank=True)
     # author
-    # tags
 
     def __str__(self) -> str:
         return self.title
